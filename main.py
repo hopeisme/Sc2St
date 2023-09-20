@@ -31,7 +31,7 @@ def _avi_extract(data):
 
 def extract_frames(clip_folder, frame_root, pool_size=None):
     avis = sorted(list(clip_folder.glob("*/*.avi")), key=natural_keys_obj)
-    frame_folders = list(set([frame_root / a.parent.name / a.stem for a in avis]))
+    frame_folders = sorted(list(set([frame_root / a.parent.name / a.stem for a in avis])))
     for f in frame_folders:
         f.mkdir(parents=True, exist_ok=True)
     data = list(zip(avis, frame_folders))
@@ -44,7 +44,7 @@ def extract_frames(clip_folder, frame_root, pool_size=None):
 
 def process():
     root = Path(args.lsmdc)
-    assert root.exists(), "Please download LSMDC dataset and put it in {}".format(path_data_other)
+    assert root.exists(), "Please download LSMDC dataset in the same folder as this script"
 
     # Move movie clips to clips folder
     avis = list(root.glob("*/*.avi"))
