@@ -11,7 +11,7 @@ This is the dataset for the paper **Script-to-Storyboard: A New Contextual Retri
 3. Run `python main.py` to extract the frames from movie clips
 
 ## Step 2 - Use the Sc2St dataset
-Download the Sc2St dataset in [Google Drive](https://drive.google.com/drive/folders/1f5jpN3WVHcP_KENWFOFrUjDJt8Q00q7G?usp=sharing)
+Download the Sc2St dataset in [Google Drive](https://drive.google.com/drive/folders/1NMlZpLoHsRfI2Iz9eeJ23w27zihi9zSR?usp=sharing)
 The dataset structure is as follows:
 ```
 Sc2St
